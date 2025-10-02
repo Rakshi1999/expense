@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npx react-router build",
-    "dev": "npx react-router dev",
-    "start": "npx react-router-serve ./build/server/index.js",
-    "typecheck": "npx react-router typegen && tsc",
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "node ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc",
     "db:migrate": "knex migrate:latest",
     "db:migrate:rollback": "knex migrate:rollback",
     "db:seed": "knex seed:run",
@@ -37,5 +37,8 @@
     "typescript": "^5.9.2",
     "vite": "^7.1.7",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
